@@ -1,0 +1,10 @@
+{
+  "name": "firebase-storage-uploader",
+  "version": "1.0.0",
+  "description": "A library to upload a image on Firebase Storage",
+  "main": "index.js",
+  "repository": "https://github.com/taishikato/firebase-storage-uploader",
+  "author": "taishikato <taishi.k0903@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

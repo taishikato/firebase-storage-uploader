@@ -1,12 +1,8 @@
-/**
- * Upload image to storage
- * @param id String image file name
- * @param imageUrl base64
- * @param firebase 
- */
-const uploadToStorage = async (id: string, imageUrl: string, firebase) => {
+import firebase from 'firebase'
+
+const uploadToStorage = async (refPath: string, imageUrl: string, firebase: firebase.app.App): Promise<string> => {
   const storageRef = firebase.storage().ref()
-  const uploadRef = storageRef.child(`users/${id}.png`)
+  const uploadRef = storageRef.child(refPath)
   await uploadRef.putString(imageUrl, 'data_url')
   const url = await uploadRef.getDownloadURL()
   return url

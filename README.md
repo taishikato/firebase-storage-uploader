@@ -24,15 +24,16 @@ const uploadImage = require('@taishikato/firebase-storage-uploader').default;
 import uploadImage from '@taishikato/firebase-storage-uploader';
 
 import firebase from 'firebase/app'
+import 'firebase/storage'
 if (!firebase.apps.length) {
   firebase.initializeApp({
     apiKey: <apiKey>,
     authDomain: <authDomain>,
-    databaseURL: <databaseURL>
-    projectId: <projectId>
-    storageBucket: <storageBucket>
-    messagingSenderId: <messagingSenderId>
-    appId: <appId>
+    databaseURL: <databaseURL>,
+    projectId: <projectId>,
+    storageBucket: <storageBucket>,
+    messagingSenderId: <messagingSenderId>,
+    appId: <appId>,
     measurementId: <measurementId>
   })
 }

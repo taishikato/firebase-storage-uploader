@@ -1,8 +1,8 @@
-name: Yarn Action
+name: Yarn Build
 on: [pull_request]
 jobs:
   build:
-    name: Yarn Action
+    name: Yarn Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

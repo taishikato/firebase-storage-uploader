@@ -4,8 +4,7 @@ const uploadToStorage = async (refPath: string, imageUrl: string, initializedFir
   const storageRef = initializedFirebase.storage().ref()
   const uploadRef = storageRef.child(refPath)
   await uploadRef.putString(imageUrl, 'data_url')
-  const url = await uploadRef.getDownloadURL()
-  return url
+  return uploadRef.getDownloadURL()
 }
 
 export default uploadToStorage
